@@ -1,0 +1,61 @@
+# Site settings
+course_name: SistemaML
+course_description: "Sistemas de Machine Learning."
+course_semester: "Optativa"
+pre_requisites: OO
+repository: RochaCarla/carlarocha.github.com
+
+
+baseurl: # the subpath of your site, e.g. /blog/
+url: "https://unb-mds.github.io/Qualifying-Software-Engineers-Undergraduates-in-DevOps/" # the base hostname & protocol for your site
+
+schoolname: "UnB"
+
+
+address: |
+    UnB | Universidade de Brasília
+    FCTE | Faculdade de Ciências e Tecnologias em Engenharia
+    LabLivre | Centro de Competência em Software Livre UnB
+
+
+emails: |
+    caguiar@unb.br
+   
+github_username: lappis-unb
+instagram_username: lab.livre
+facebook_username: lappisunb5
+# Set your Google Analytics tracking ID (set up yours at http://www.google.com/analytics/)
+# google_analytics: UA-XXXXXXXX-X
+
+### Do not change the followings unless you know what you are doing ###
+
+# Build settings
+markdown: kramdown
+
+# Other options
+permalink: blog/:year/:month/:title
+excerpt_separator: "<!--more-->"
+
+include: ['_images', '_css']
+exclude: ['develop', 'vendor']
+
+dateformat: "%d/%m/%Y"
+
+future: true
+collections:
+    events:
+        output: true
+    lectures:
+        output: true
+    posts:
+        output: true
+    announcements:
+        output: false
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "posts"

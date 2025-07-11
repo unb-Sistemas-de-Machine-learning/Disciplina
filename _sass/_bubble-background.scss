@@ -1,0 +1,57 @@
+.gradient-bg {
+  /* ... */
+
+  .g1 {
+    background: radial-gradient(
+      circle at center,
+      rgba(220, 200, 230, 0.8) 0%,
+      rgba(220, 200, 230, 0) 50%
+    ) no-repeat;
+    /* ... */
+  }
+
+  .g2 {
+    background: radial-gradient(
+      circle at center,
+      rgba(230, 215, 240, 0.8) 0%,
+      rgba(230, 215, 240, 0) 50%
+    ) no-repeat;
+    /* ... */
+  }
+
+  .g3 {
+    background: radial-gradient(
+      circle at center,
+      rgba(200, 150, 220, 0.8) 0%,
+      rgba(200, 150, 220, 0) 50%
+    ) no-repeat;
+    /* ... */
+  }
+
+  .g4 {
+    background: radial-gradient(
+      circle at center,
+      rgba(170, 140, 200, 0.8) 0%,
+      rgba(170, 140, 200, 0) 50%
+    ) no-repeat;
+    /* ... */
+  }
+
+  .g5 {
+    background: radial-gradient(
+      circle at center,
+      rgba(190, 160, 230, 0.8) 0%,
+      rgba(190, 160, 230, 0) 50%
+    ) no-repeat;
+    /* ... */
+  }
+
+  .interactive {
+    background: radial-gradient(
+      circle at center,
+      rgba(210, 180, 240, 0.8) 0%,
+      rgba(210, 180, 240, 0) 50%
+    ) no-repeat;
+    /* ... */
+  }
+}

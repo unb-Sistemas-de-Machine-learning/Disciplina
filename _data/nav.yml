@@ -1,0 +1,24 @@
+items:
+- url: /
+  name: Página Inicial
+  icon_class: fa fa-home fa-lg
+  
+- url: /planoensino/
+  name: Plano de ensino
+  icon_class: fas fa-list-alt
+
+- url: /materials/
+  name: Materiais
+  icon_class: fas fa-book
+
+- url: /slides/
+  name: Slides
+  icon_class: fas fa-book-reader
+
+- url: /posts/
+  name: Projetos
+  icon_class: fas fa-user-graduate
+  
+- url: https://github.com/orgs/unb-Sistemas-de-Machine-learning
+  name: Repositórios
+  icon_class: fab fa-github

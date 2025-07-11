@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <script>
+    // Store scroll
+    const debounce = (fn) => {
+      let frame;
+
+      return (...params) => {
+        if (frame) {
+          cancelAnimationFrame(frame);
+        }
+
+        frame = requestAnimationFrame(() => {
+          fn(...params);
+        });
+      };
+    };
+    const storeScroll = () => {
+      document.documentElement.dataset.scroll = window.scrollY;
+      if (window.scrollY < 0) document.documentElement.dataset.scroll = 0;
+    };
+    document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+    storeScroll();
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const interBubble = document.querySelector('.interactive');
+      let curX = 0;
+      let curY = 0;
+      let tgX = 0;
+      let tgY = 0;
+
+      function move() {
+          curX += (tgX - curX) / 20;
+          curY += (tgY - curY) / 20;
+          interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+          requestAnimationFrame(() => {
+              move();
+          });
+      }
+
+      window.addEventListener('mousemove', (event) => {
+          tgX = event.clientX;
+          tgY = event.clientY;
+          if (interBubble) {
+            move();
+          }
+      });
+    });
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Plano de Ensino - SistemaML / Optativa </title>
+  <meta name="description" content="Plano de Ensino - SistemaML / Optativa">
+  
+  <link rel="stylesheet" href="/_css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/planoensino/">
+  <link rel="alternate" type="application/rss+xml" title="SistemaML / Optativa - UnB" href="http://0.0.0.0:4000/feed.xml" />
+  <link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
+
+  
+  
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+
+  <body>
+
+    
+
+<header class="site-header">
+
+  <div class="wrapper">
+      <!-- <table><tr>
+          <td><img width="170" src="/_images/logo.png" valign="middle"></td>
+          <td style="padding-left:20px;"><a class="schoolname" style="font-size: 25px;" class="site-title" href="">UnB</a>
+          <br/>
+          <span style="margin-top: -10px;margin-bottom: -5px;" class="site-title"><a href="/" style="font-size: 47px;" title="SistemaML / Optativa - UnB"><b>SistemaML</a></b></span>
+          <br/>
+          <span class="coursesemeter" style="font-size: 20px;font-weight: bold;margin-top: 10px;display: block;">Optativa</span>
+          </td>
+        </tr></table> -->
+
+    <nav class="site-nav">
+
+      <!-- <a href="#" class="menu-icon menu.open">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>  
+
+    <div class="trigger"><h1>Main Navigation</h1> -->
+      <a href="/">
+        <img width="100" src="/_images/logo.png">
+      </a>
+      <ul class="menu">
+    
+        <li>
+            <a class="page-link" href="/">
+                <i class="fa fa-home fa-lg"></i> Página Inicial
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="/planoensino/">
+                <i class="fas fa-list-alt"></i> Plano de ensino
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="/materials/">
+                <i class="fas fa-book"></i> Materiais
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="/slides/">
+                <i class="fas fa-book-reader"></i> Slides
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="/posts/">
+                <i class="fas fa-user-graduate"></i> Projetos
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="https://github.com/orgs/unb-Sistemas-de-Machine-learning">
+                <i class="fab fa-github"></i> Repositórios
+            </a>
+        </li>
+    
+</ul>
+
+     <!-- </div>   -->
+    </nav>
+
+  </div>
+
+  <!-- <div class="header-texture" /> -->
+  
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Plano de Ensino</h1>
+  </header>
+
+  <article class="post-content">
+    <h1 id="sistemas-de-machine-learning---plano-de-ensino">Sistemas de Machine Learning - Plano de Ensino</h1>
+
+<p><strong>Disciplina:</strong> Sistemas de Machine Learning</p>
+
+<p><strong>Carga Horária:</strong> 60 horas</p>
+
+<p><strong>Professor:</strong> Carla Rocha</p>
+
+<p><strong>Créditos:</strong> 04</p>
+
+<p><strong>Semestre/Ano:</strong> 02/2025</p>
+
+<h2 id="sobre-o-que-é-este-curso">Sobre o que é este curso?</h2>
+
+<p>Este curso visa fornecer uma estrutura iterativa para desenvolver sistemas de machine learning do mundo real que sejam implementáveis, confiáveis e escaláveis.
+Começamos considerando todos os interessados em cada projeto de machine learning e seus objetivos. Diferentes objetivos exigem diferentes escolhas de design, e este curso discutirá os trade-offs dessas escolhas.</p>
+
+<p>Os estudantes aprenderão sobre gerenciamento de dados, engenharia de dados, engenharia de features, abordagens para seleção de modelos, treinamento, escalabilidade, como monitorar continuamente e implementar mudanças em sistemas de ML, bem como o lado humano dos projetos de ML, como estrutura de equipe e métricas de negócio. Durante o processo, os estudantes aprenderão sobre questões importantes incluindo privacidade, equidade e segurança.</p>
+
+<h2 id="por-que-design-de-sistemas-de-machine-learning">Por que design de sistemas de machine learning?</h2>
+<p>O design de sistemas de machine learning é o processo de definir a arquitetura de software, infraestrutura, algoritmos e dados para um sistema de machine learning atender aos requisitos especificados.</p>
+
+<p>A abordagem tutorial tem sido tremendamente bem-sucedida em colocar modelos em funcionamento. No entanto, os sistemas resultantes tendem a ficar desatualizados rapidamente porque (1) o espaço de ferramentas está sendo inovado, (2) os requisitos de negócio mudam, e (3) as distribuições de dados mudam constantemente. Sem um design intencional para manter todos os componentes juntos, um sistema se tornará um passivo técnico, propenso a erros e rápido para desmoronar.</p>
+
+<h2 id="ementa-do-programa">Ementa do Programa</h2>
+
+<ul>
+  <li>Modelos de ciclo de vida e de processos; Processo Unificado. Métodos Ágeis de desenvolvimento de software. Outras abordagens de desenvolvimento de software. Ferramentas.</li>
+</ul>
+
+<h2 id="metodologia-de-ensino">Metodologia de Ensino</h2>
+
+<p>Uma estratégia eficaz de aprendizagem deve integrar conceitos teóricos com sua aplicação prática, seguindo o princípio de “aprender fazendo”. Sem prática, não há aprendizado significativo. Portanto, o processo de ensino-aprendizagem deve incluir duas etapas fundamentais: sessões de assimilação de conceitos teóricos e sessões de prática.</p>
+
+<p>A disciplina utiliza aprendizagem por experiência, aprendizagem orientada a projetos, processo de Onboarding e práticas de comunidades Open source para que o aluno seja ativo no seu processo de aprendizagem.</p>
+
+<h1 id="canais-de-comunicação">Canais de Comunicação</h1>
+
+<p>A disciplina será realizada de forma presencial.</p>
+
+<h2 id="dúvidas-conversas-rápidas-avisos">Dúvidas, conversas rápidas, avisos</h2>
+
+<h2 id="descrição-do-programa">Descrição do Programa</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aula</th>
+      <th>Tópico / Atividade</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aula 1</td>
+      <td>Entendendo a produção de machine learning</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Aula 2</td>
+      <td>Fundamentos de ML e sistemas de dados</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Aula 3</td>
+      <td>Dados de treinamento</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Aula 4</td>
+      <td>Engenharia de features</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Aula 6</td>
+      <td>Seleção, desenvolvimento e treinamento de modelos</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Aula 8</td>
+      <td>Avaliação de modelos</td>
+    </tr>
+    <tr>
+      <td>Aula 9</td>
+      <td>Deploy</td>
+    </tr>
+    <tr>
+      <td>Aula 10</td>
+      <td>Tutoriais de deployment – avaliação de ferramentas MLOps e Ray Serve</td>
+    </tr>
+    <tr>
+      <td>Aula 11</td>
+      <td>Diagnóstico de falhas em sistemas de ML, shifts de distribuição de dados e monitoramento</td>
+    </tr>
+    <tr>
+      <td>Aula 12</td>
+      <td>Monitoramento &amp; Aprendizado Contínuo</td>
+    </tr>
+    <tr>
+      <td>Aula 13</td>
+      <td>Deploy e rastreamento de experimentos</td>
+    </tr>
+    <tr>
+      <td>Aula 14</td>
+      <td>Tutorial de monitoramento</td>
+    </tr>
+    <tr>
+      <td>Aula 16</td>
+      <td>Forecasting em séries temporais e GNN; ML além da acurácia: Fairness, Segurança e Governança</td>
+    </tr>
+    <tr>
+      <td>Aula 17</td>
+      <td>Infraestrutura e plataformas de ML</td>
+    </tr>
+    <tr>
+      <td>Aula 18</td>
+      <td>Discussão de projeto final</td>
+    </tr>
+    <tr>
+      <td>Aula 19</td>
+      <td>Integração de ML em negócios – Como apresentar e valores de negócio da AI</td>
+    </tr>
+    <tr>
+      <td>Aula 20</td>
+      <td>Demo day de projetos finais – gravações disponíveis no YouTube</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="avaliação">Avaliação</h2>
+<p>Sua nota final será calculada da seguinte forma:</p>
+
+<p>Projeto Final (65%): Construa uma aplicação completa de ML para demonstrar suas habilidades. Você apresentará seu trabalho em nosso dia de demonstração junto com todos os outros estudantes.</p>
+
+<p>Trabalhos (30%): Complete 2-3 tarefas envolventes e focadas, projetadas para reforçar conceitos-chave.</p>
+
+<p>Participação (5%): Contribua de forma significativa nas discussões em sala de aula, fóruns  e horários de atendimento.</p>
+
+<h2 id="perguntas">Perguntas</h2>
+
+<h3 id="quão-difícil-é-o-curso">Quão difícil é o curso?</h3>
+
+<p>Os materiais não são difíceis de entender, mas os projetos finais são bastante envolventes. Não recomendaríamos fazer o curso a menos que você esteja pronto para construir coisas e aprender com experiência prática!</p>
+
+<h3 id="qual-é-o-formato-da-aula">Qual é o formato da aula?</h3>
+
+<p>Serão aulas expositivas, tutoriais e discussão. Frequentemente teremos especialistas da indústria para nos dar tutoriais sobre ferramentas para streaming de dados, rastreamento de experimentos, framework de deep learning, monitoramento, etc.</p>
+
+<h3 id="preciso-saber-python-para-o-curso">Preciso saber Python para o curso?</h3>
+
+<p>Como Python se tornou a linguagem mais popular para machine learning, esperamos que a maioria dos tutoriais seja em Python. Fluência em Python não é necessária, mas tornará sua vida muito mais fácil durante o curso.</p>
+
+<h2 id="bibliografia-básica">Bibliografia Básica</h2>
+<ul>
+  <li>Isaque Alves, Leonardo AF Leite, Paulo Meirelles, Fabio Kon, Carla Silva Rocha Aguiar. “Practices for managing machine learning products: A multivocal literature review”. Disponível <a href="https://d1wqtxts1xzle7.cloudfront.net/104634919/41289579-libre.pdf?1690750077=&amp;response-content-disposition=inline%3B+filename%3DPractices_for_Managing_Machine_Learning.pdf&amp;Expires=1752232454&amp;Signature=DCdwOH1YWjb6XQevPG77Nz8CBI9eAj-kmDAzoIAUSMxg2ZPLESxVDpykyxi-kiqpXmjyzORzAEXui664Zi82OjK1mwpZVjwqMhXzlSmnqSVo4hhS2yiNu9GaIodXHAs6ZeO50XTZUNWcgL6ndzlgOuSpw8RUbhgu1Y6DbyCfbnFfXNG3e1Hvu48eDUWMiHb3fJlvFM9mvuxfcUh0KJewZVzXyQJV7IEaBcieIkgWb3uJitxF9vDk7SEYk1VXO8gqatY5U3mox19WO67IabWeEO5KLi8259dozzDSWWVVNraJFHsYmC6tnquH9HLzXWCGejktuc1W8Zo1qDFR6KBTGA__&amp;Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA">aqui</a></li>
+  <li>Chip Huyen, “Projetando Sistemas de Machine Learning: Processo Interativo Para Aplicações Prontas Para Produção”</li>
+  <li>Curso é inspirado em: https://stanford-cs329s.github.io/syllabus.html</li>
+</ul>
+
+<h2 id="bibliografia-complementar">Bibliografia Complementar</h2>
+
+<hr />
+<hr />
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col  footer-col-1">
+
+        <h3><b>Redes:</b></h3>
+
+        <ul class="social-media-list" style="display:inline-flex">
+          
+            <li>
+              <a href="https://github.com/lappis-unb">
+                <i class="fab fa-github" style="color:gray; font-size:30px; margin-right:20px;"></i>
+              </a>
+            </li>
+          
+
+          
+
+          
+            <li>
+              <a href="https://instagram.com/lab.livre">
+                <i class="fab fa-instagram" style="color:gray; font-size:30px; margin-right:20px;"></i>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://facebook.com/lappisunb5">
+                <i class="fab fa-facebook" style="color:gray; font-size:30px; margin-right:20px;"></i>
+              </a>
+            </li>
+          
+
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+
+        <h3><b>Contato:</b></h3>
+        <p class="text">
+          caguiar@unb.br
+
+        </p>
+
+      </div>
+
+
+      <div class="footer-col  footer-col-1">
+        <p class="text">
+        UnB | Universidade de Brasília<br />
+FCTE | Faculdade de Ciências e Tecnologias em Engenharia<br />
+LabLivre | Centro de Competência em Software Livre UnB<br />
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+
+</html>

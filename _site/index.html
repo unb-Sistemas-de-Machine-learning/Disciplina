@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <script>
+    // Store scroll
+    const debounce = (fn) => {
+      let frame;
+
+      return (...params) => {
+        if (frame) {
+          cancelAnimationFrame(frame);
+        }
+
+        frame = requestAnimationFrame(() => {
+          fn(...params);
+        });
+      };
+    };
+    const storeScroll = () => {
+      document.documentElement.dataset.scroll = window.scrollY;
+      if (window.scrollY < 0) document.documentElement.dataset.scroll = 0;
+    };
+    document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+    storeScroll();
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const interBubble = document.querySelector('.interactive');
+      let curX = 0;
+      let curY = 0;
+      let tgX = 0;
+      let tgY = 0;
+
+      function move() {
+          curX += (tgX - curX) / 20;
+          curY += (tgY - curY) / 20;
+          interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+          requestAnimationFrame(() => {
+              move();
+          });
+      }
+
+      window.addEventListener('mousemove', (event) => {
+          tgX = event.clientX;
+          tgY = event.clientY;
+          if (interBubble) {
+            move();
+          }
+      });
+    });
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SistemaML / Optativa - UnB</title>
+  <meta name="description" content=" - SistemaML / Optativa">
+  
+  <link rel="stylesheet" href="/_css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/">
+  <link rel="alternate" type="application/rss+xml" title="SistemaML / Optativa - UnB" href="http://0.0.0.0:4000/feed.xml" />
+  <link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
+
+  
+  
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+
+  <body>
+
+    
+
+<header class="site-header">
+
+  <div class="wrapper">
+      <!-- <table><tr>
+          <td><img width="170" src="/_images/logo.png" valign="middle"></td>
+          <td style="padding-left:20px;"><a class="schoolname" style="font-size: 25px;" class="site-title" href="">UnB</a>
+          <br/>
+          <span style="margin-top: -10px;margin-bottom: -5px;" class="site-title"><a href="/" style="font-size: 47px;" title="SistemaML / Optativa - UnB"><b>SistemaML</a></b></span>
+          <br/>
+          <span class="coursesemeter" style="font-size: 20px;font-weight: bold;margin-top: 10px;display: block;">Optativa</span>
+          </td>
+        </tr></table> -->
+
+    <nav class="site-nav">
+
+      <!-- <a href="#" class="menu-icon menu.open">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>  
+
+    <div class="trigger"><h1>Main Navigation</h1> -->
+      <a href="/">
+        <img width="100" src="/_images/logo.png">
+      </a>
+      <ul class="menu">
+    
+        <li>
+            <a class="page-link" href="/">
+                <i class="fa fa-home fa-lg"></i> Página Inicial
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="/planoensino/">
+                <i class="fas fa-list-alt"></i> Plano de ensino
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="/materials/">
+                <i class="fas fa-book"></i> Materiais
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="/slides/">
+                <i class="fas fa-book-reader"></i> Slides
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="/posts/">
+                <i class="fas fa-user-graduate"></i> Projetos
+            </a>
+        </li>
+    
+        <li>
+            <a class="page-link" href="https://github.com/orgs/unb-Sistemas-de-Machine-learning">
+                <i class="fab fa-github"></i> Repositórios
+            </a>
+        </li>
+    
+</ul>
+
+     <!-- </div>   -->
+    </nav>
+
+  </div>
+
+  <!-- <div class="header-texture" /> -->
+  
+</header>
+
+    <div class="gradient-bg">
+  <div class="gradients-container">
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"></div>
+    <div class="g4"></div>
+    <div class="g5"></div>
+    <div class="interactive"></div>
+  </div>
+</div>
+    <div class="home-message">
+    <h1 class="title">Sistemas de Machine Learning</h1>
+    <h4 class="subtitle">Disciplina do Curso de Engenharia de Software da Universidade de Brasilia. Este curso visa fornecer uma estrutura iterativa para desenvolver sistemas de machine learning do mundo real que sejam implementáveis, confiáveis e escaláveis.
+ </h4>
+    <div class="water-mark-content">
+        <h1 class="water-mark">Carla Rocha <b>LabLivre | CCSL UnB</b></h1>
+    </div>
+</div>
+
+    <div class="last-editions-wrapper">
+    <div class="editions-image-wrapper">
+        <img class="image-editions-effect" src="/_images/ML_Workflow.png">
+    </div>
+    <div class="editions-text-wrapper">
+        <h1 class="editions-title">Sobre o que é este curso?</h1>
+        <h4 class="editions-text"> Aprenda a desenvolver projetos de machine learning de forma completa, desde a identificação de stakeholders até a implementação em produção. O curso abrange gerenciamento de dados, engenharia de features, seleção de modelos, escalabilidade e monitoramento contínuo. Além dos aspectos técnicos, você aprenderá sobre estruturação de equipes, métricas de negócio e questões éticas como privacidade, equidade e segurança. **Ideal para:** Profissionais que desejam liderar projetos de ML considerando tanto impactos técnicos quanto organizacionais.</h4>
+        <h4 class="editions-text"> O design de sistemas de ML é o processo de definir arquitetura, infraestrutura, algoritmos e dados para atender requisitos específicos de forma robusta e sustentável. Embora tutoriais sejam eficazes para colocar modelos em funcionamento, os sistemas resultantes rapidamente se tornam obsoletos devido a três fatores: evolução das ferramentas, mudanças nos requisitos de negócio e deriva de dados.
+Sem design intencional, sistemas de ML se transformam em passivos técnicos - propensos a erros, difíceis de manter e que perdem valor rapidamente. Um design arquitetural bem planejado é fundamental para criar soluções duradouras e escaláveis.</h4>
+    </div>
+</div>
+<div class="institutions-wrapper">
+    <div class="institutions-text-wrapper">
+        <h1 class="section-title">Parcerias</h1>
+    </div>
+    <div class="institutions-image-wrapper">
+        <div class="image-wrapper">
+            <img class="image-institutions-effect" height="30" src="/_images/unb.png">
+        </div>
+        <div class="image-wrapper">
+            <img class="image-institutions-effect" height="30" src="/_images/lappis.png">
+        </div>
+
+    </div>
+</div>  
+<ul class="testimony-wrapper">
+    <div class="testimony-title-wrapper">
+        <p class="testimony-title">Últimos paticipantes do <b>BRISA</b></p>
+    </div>
+    <div class="testimony-cards-content">
+        
+            <li class="testimony-item">
+                <div class="testimony-card">
+                    <div class="testimony-content-wrapper">
+                        <p class="testimony-content">"Professora do curso de Engenharia de Software da UnB e coordenadora do laboratório de pesquisa LabLivre"</p>
+                    </div>
+                    <p class="testimony-author">Carla Rocha</p>
+                </div>
+                <img class="testimony-image" height="32" src=/_images/testimony/carla.png>
+            </li>
+        
+            <li class="testimony-item">
+                <div class="testimony-card">
+                    <div class="testimony-content-wrapper">
+                        <p class="testimony-content">"Graduado em Engenharia de Software pela UnB e finalizando o doutorado em ESW IME-USP"</p>
+                    </div>
+                    <p class="testimony-author">Isaque Alves</p>
+                </div>
+                <img class="testimony-image" height="32" src=/_images/testimony/isaque.jpg>
+            </li>
+        
+            <li class="testimony-item">
+                <div class="testimony-card">
+                    <div class="testimony-content-wrapper">
+                        <p class="testimony-content">"Graduado em Engenharia de Software pela UnB e finalizando o mestrado em ESW na UnB"</p>
+                    </div>
+                    <p class="testimony-author">Guilherme</p>
+                </div>
+                <img class="testimony-image" height="32" src=/_images/testimony/guilherme.jpg>
+            </li>
+        
+    </div>
+</ul>
+<div class="method-wrapper">
+    <div class="method-title-wrapper">
+        <h1 class="method-title">Método - Disciplina Orientada a Projetos</h1>
+    </div>
+
+    <div class="method-content-wrapper">
+        <div class="method-content">
+            <div class="method-content-container">
+                <img class="method-image" height="32" src="/_images/ead.png">
+                <h2 class="method-content-title">
+                      Challenges
+                </h2>
+            </div>
+            <p class="method-content-text">
+                Ao longo da disciplina, os alunos desenvolveram pequenas soluções práticas para consolidar os conceitos apresentados em sala de aula. Serão desenvolvidos Agentes de IA, RAG, classificadores. Utilizando tecnologias livres como mlflow, Ragflow, LLMs (sabia), keras, etc.
+            </p>
+        </div>
+        <div class="method-content">
+            <div class="method-content-container">
+                <img class="method-image" height="32" src="/_images/group.png"> 
+                <h2 class="method-content-title">
+                   Prova de Conceito (PoC)
+                </h2>
+            </div>
+            <p class="method-content-text">
+                Ao longo do curso, equipes reduzidas criaram provas de conceito com o objetivo de explorar mais a fundo desafios e ferramentas no desenvolvimento de sistemas de aprendizado de máquina
+            </p>
+        </div>
+    </div>
+</div>
+<div id="partners-contribution" class="partners-content">
+    <div class="partners-wrapper">
+        <div class="partners-timeline">
+            <div class="timeline-content-wrapper">
+                <div class="icons-wrapper">
+                    <i class="fas fa-lightbulb" style="color:#262626; font-size:25px;"></i>
+                </div>
+                <p>Idealize um projeto</p>
+            </div>
+            <div class="line"></div>
+            <div class="timeline-content-wrapper content-shine">
+                <div class="icons-wrapper shine">
+                    <i class="fas fa-handshake" style="color:#262626; font-size:35px;"></i>
+                </div>
+                <p>Monte sua equipe</p>
+            </div>
+            <div class="line"></div>
+            <div class="timeline-content-wrapper">
+                <div class="icons-wrapper">
+                    <i class="fas fa-laptop-code" style="color:#262626; font-size:25px;"></i>
+                </div>
+                <p>Desenvolvimento do seu projeto</p>
+            </div>
+            <div class="line"></div>
+            <div class="timeline-content-wrapper">
+                <div class="icons-wrapper">
+                    <i class="fas fa-cube" style="color:#262626; font-size:25px;"></i>
+                </div>
+                <p>Sua ideia se torna realidade</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about-lab-wrapper">
+    <div class="about-content">
+        <h1>Sobre o LabLivre</h1>
+        <h4 class="about-text">O Lab Livre foi criado para atuar em diversas áreas tecnológicas, desde sistemas de informação até sistemas de machine learning, objetivando as oportunidades de pesquisas teóricas e aplicadas.</h4> 
+        <h4 class="about-text">A profa. Carla Rocha é professora na Faculdade de Engenharia de Software da Universidade de Brasília (UnB), onde atua como uma das coordenadoras do laboratório LAPPIS. Em 2024, somos organização participante do programa Google Summer of Code. Participa também do grupo de pesquisa com IME-USP Sistemas de Software, Ciência e Engenharia de Dados e Computação de Alto Desempenho, e faz parte do mestrado acadêmico PPCA. Os interesses acadêmicos se concentram na área de Engenharia de Software, abrangendo tópicos como DevOps, Agile, aspectos humanos do desenvolvimento de software, Aprendizado de Máquina e Software Livre.</h4>    
+        <h4 class="about-text">Saiba mais em <a href="http://www.carlarocha.org">www.carlarocha.org</a></h4>   
+    </div>
+    <div class="imagens-grid-wrapper">
+        <div class="images-column big-image">
+            <img src="/_images/about_lab/carla_ahazando.jpg">
+        </div>
+        <div class="images-column">
+            <div class="grid-wrapper">
+                <img src="/_images/about_lab/ostres.jpg">
+            </div>
+            <div class="grid-wrapper">
+                <img src="/_images/about_lab/lab_photo.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col  footer-col-1">
+
+        <h3><b>Redes:</b></h3>
+
+        <ul class="social-media-list" style="display:inline-flex">
+          
+            <li>
+              <a href="https://github.com/lappis-unb">
+                <i class="fab fa-github" style="color:gray; font-size:30px; margin-right:20px;"></i>
+              </a>
+            </li>
+          
+
+          
+
+          
+            <li>
+              <a href="https://instagram.com/lab.livre">
+                <i class="fab fa-instagram" style="color:gray; font-size:30px; margin-right:20px;"></i>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://facebook.com/lappisunb5">
+                <i class="fab fa-facebook" style="color:gray; font-size:30px; margin-right:20px;"></i>
+              </a>
+            </li>
+          
+
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+
+        <h3><b>Contato:</b></h3>
+        <p class="text">
+          caguiar@unb.br
+
+        </p>
+
+      </div>
+
+
+      <div class="footer-col  footer-col-1">
+        <p class="text">
+        UnB | Universidade de Brasília<br />
+FCTE | Faculdade de Ciências e Tecnologias em Engenharia<br />
+LabLivre | Centro de Competência em Software Livre UnB<br />
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+
+</html>
