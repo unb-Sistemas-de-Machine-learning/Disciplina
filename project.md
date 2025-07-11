@@ -30,10 +30,6 @@ O design de sistemas de machine learning é o processo de definir a arquitetura 
 A abordagem tutorial tem sido tremendamente bem-sucedida em colocar modelos em funcionamento. No entanto, os sistemas resultantes tendem a ficar desatualizados rapidamente porque (1) o espaço de ferramentas está sendo inovado, (2) os requisitos de negócio mudam, e (3) as distribuições de dados mudam constantemente. Sem um design intencional para manter todos os componentes juntos, um sistema se tornará um passivo técnico, propenso a erros e rápido para desmoronar.
 
 
-## Ementa do Programa
-
-- Modelos de ciclo de vida e de processos; Processo Unificado. Métodos Ágeis de desenvolvimento de software. Outras abordagens de desenvolvimento de software. Ferramentas.
-
 ## Metodologia de Ensino
 
 Uma estratégia eficaz de aprendizagem deve integrar conceitos teóricos com sua aplicação prática, seguindo o princípio de "aprender fazendo". Sem prática, não há aprendizado significativo. Portanto, o processo de ensino-aprendizagem deve incluir duas etapas fundamentais: sessões de assimilação de conceitos teóricos e sessões de prática.
