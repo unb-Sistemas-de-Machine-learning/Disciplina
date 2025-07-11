@@ -45,7 +45,6 @@ A disciplina será realizada de forma presencial.
 
 
 
-
 ## Descrição do Programa
 
 | Aula    | Tópico / Atividade                                                                                          |
@@ -101,6 +100,7 @@ Como Python se tornou a linguagem mais popular para machine learning, esperamos 
 
 ## Bibliografia Complementar
 
+- [Deep Dive into LLMs like ChatGPT](https://www.youtube.com/@AndrejKarpathy)
 
 
 
