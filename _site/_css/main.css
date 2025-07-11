@@ -347,12 +347,12 @@ ul#archive li span a:hover { border-bottom: #bdbdbd 1px solid;
 .gradient-bg { height: 100vh; position: relative; overflow: hidden; background: linear-gradient(40deg, white, white); top: 0; left: 0; }
 .gradient-bg svg { display: none; }
 .gradient-bg .gradients-container { filter: url(#goo) blur(40px); width: 100%; height: 100%; }
-.gradient-bg .g1 { position: absolute; background: radial-gradient(circle at center, rgba(165, 201, 245, 0.8) 0, rgba(165, 201, 245, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 60%; height: 60%; top: 20%; left: 20%; transform-origin: center center; animation: moveVertical 30s ease infinite; opacity: 1; }
-.gradient-bg .g2 { position: absolute; background: radial-gradient(circle at center, rgba(204, 213, 255, 0.8) 0, rgba(204, 213, 255, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 60%; height: 60%; top: 20%; left: 20%; transform-origin: calc(50% - 400px); animation: moveInCircle 20s reverse infinite; opacity: 1; }
-.gradient-bg .g3 { position: absolute; background: radial-gradient(circle at center, rgba(0, 193, 252, 0.8) 0, rgba(0, 193, 252, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 60%; height: 60%; top: 220%; left: -480%; transform-origin: calc(50% + 400px); animation: moveInCircle 40s linear infinite; opacity: 1; }
-.gradient-bg .g4 { position: absolute; background: radial-gradient(circle at center, rgba(113, 153, 198, 0.8) 0, rgba(113, 153, 198, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 60%; height: 60%; top: 20%; left: 20%; transform-origin: calc(50% - 200px); animation: moveHorizontal 40s ease infinite; opacity: 0.7; }
-.gradient-bg .g5 { position: absolute; background: radial-gradient(circle at center, rgba(10, 129, 209, 0.8) 0, rgba(10, 129, 209, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 120%; height: 120%; top: -10%; left: -10%; transform-origin: calc(50% - 800px) calc(50% + 200px); animation: moveInCircle 20s ease infinite; opacity: 1; }
-.gradient-bg .interactive { position: absolute; background: radial-gradient(circle at center, rgba(49, 133, 252, 0.8) 0, rgba(49, 133, 252, 0) 50%) no-repeat; mix-blend-mode: hard-light; transform: 0; width: 100%; height: 100%; top: -50%; left: -50%; opacity: 0.7; }
+.gradient-bg .g1 { position: absolute; background: radial-gradient(circle at center, rgba(220, 200, 230, 0.8) 0, rgba(220, 200, 230, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 60%; height: 60%; top: 20%; left: 20%; transform-origin: center center; animation: moveVertical 30s ease infinite; opacity: 1; }
+.gradient-bg .g2 { position: absolute; background: radial-gradient(circle at center, rgba(230, 215, 240, 0.8) 0, rgba(230, 215, 240, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 60%; height: 60%; top: 20%; left: 20%; transform-origin: calc(50% - 400px); animation: moveInCircle 20s reverse infinite; opacity: 1; }
+.gradient-bg .g3 { position: absolute; background: radial-gradient(circle at center, rgba(200, 150, 220, 0.8) 0, rgba(200, 150, 220, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 60%; height: 60%; top: 220%; left: -480%; transform-origin: calc(50% + 400px); animation: moveInCircle 40s linear infinite; opacity: 1; }
+.gradient-bg .g4 { position: absolute; background: radial-gradient(circle at center, rgba(170, 140, 200, 0.8) 0, rgba(170, 140, 200, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 60%; height: 60%; top: 20%; left: 20%; transform-origin: calc(50% - 200px); animation: moveHorizontal 40s ease infinite; opacity: 0.7; }
+.gradient-bg .g5 { position: absolute; background: radial-gradient(circle at center, rgba(190, 160, 230, 0.8) 0, rgba(190, 160, 230, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 120%; height: 120%; top: -10%; left: -10%; transform-origin: calc(50% - 800px) calc(50% + 200px); animation: moveInCircle 20s ease infinite; opacity: 1; }
+.gradient-bg .interactive { position: absolute; background: radial-gradient(circle at center, rgba(210, 180, 240, 0.8) 0, rgba(210, 180, 240, 0) 50%) no-repeat; mix-blend-mode: hard-light; transform: 0; width: 100%; height: 100%; top: -50%; left: -50%; opacity: 0.7; }
 
 .home-message { z-index: 99; height: 100vh; width: 100%; position: absolute; top: 0; left: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
@@ -364,7 +364,7 @@ ul#archive li span a:hover { border-bottom: #bdbdbd 1px solid;
 
 .water-mark { margin: 0; padding: 20px 20px; font-size: 16px; word-spacing: 2px; letter-spacing: 0.6px; color: white; background-color: #262626; }
 
-.institutions-wrapper { padding: 30px 12%; background-color: #1f285f; display: flex; align-items: center; }
+.institutions-wrapper { padding: 30px 12%; background-color: #b358c8; display: flex; align-items: center; }
 
 .institutions-text-wrapper { width: 20%; padding: 0px 40px; margin-right: 40px; }
 .institutions-text-wrapper .section-title { color: white; margin: 0; font-size: 35px; font-weight: 600; }
@@ -422,7 +422,7 @@ ul#archive li span a:hover { border-bottom: #bdbdbd 1px solid;
 .method-content .method-content-title { color: #1f285f; font-size: 18px; font-weight: 600; margin-bottom: 0px; }
 .method-content .method-content-text { font-size: 14px; }
 
-.about-lab-wrapper { display: flex; width: 100%; background-color: #14193d; }
+.about-lab-wrapper { display: flex; width: 100%; background-color: #b358c8; }
 
 .imagens-grid-wrapper { display: flex; }
 .imagens-grid-wrapper img { filter: grayscale(100%); transition: all 0.4s ease-in-out; }

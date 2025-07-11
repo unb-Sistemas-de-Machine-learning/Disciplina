@@ -27,3 +27,4 @@ Docker
 1 - atualizacao dos dados gerais em _config.yml
 2 - Conteudo da pagina inicial está em ./_include/
 3 - Conteudo auxiliar e navbar estão disponiveis em ./data/
+4 - cor das bolhas ./_sass/_bubble-background.scss
