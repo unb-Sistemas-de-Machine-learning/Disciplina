@@ -7,7 +7,7 @@ repository: RochaCarla/carlarocha.github.com
 
 
 baseurl: # the subpath of your site, e.g. /blog/
-url: "https://unb-sistemas-de-machine-learning.github.io/Disciplia/" # the base hostname & protocol for your site
+url: "https://unb-sistemas-de-machine-learning.github.io/Disciplia" # the base hostname & protocol for your site
 
 schoolname: "UnB"
 
