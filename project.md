@@ -10,7 +10,7 @@ permalink: /planoensino/
 
 **Carga Horária:** 60 horas
 
-**Professor:** Carla Rocha
+**Professor:** Carla Rocha, Isaque Alves
 
 **Créditos:** 04 
 
