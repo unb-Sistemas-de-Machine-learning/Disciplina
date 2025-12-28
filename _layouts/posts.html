@@ -1,18 +1,40 @@
 ---
-layout: page
+layout: default
 ---
 
-{{ content }}
-<ul id="archive">
-{% for post in site.posts %}
-      <li class="archiveposturl" style="background: transparent">
-      <span><a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a></span>
-      <strong style="font-size:100%; font-family: 'Titillium Web', sans-serif; float:right">
-      <a title="Go to assignment instructions" href="{{ post.pdf }}"><i class="fas fa-link"></i></a> 
-<!-- {% if post.attachment %}
-&nbsp; <a title="Download attachments (zip)" href="{{ post.attachment | prepend: site.baseurl }}"><i class="fas fa-file-archive"></i></a>
-{% endif %} -->
-</strong> 
-      </li>
-{% endfor %}
-</ul>
+<div class="coursera-page">
+  <div class="page-header">
+    <h1><i class="fas fa-file-alt"></i> {{ page.title }}</h1>
+    <p>{{ content }}</p>
+  </div>
+
+  <div class="posts-grid">
+    {% for post in site.posts %}
+    <div class="post-card">
+      <div class="post-icon">
+        <i class="fas fa-newspaper"></i>
+      </div>
+      <div class="post-content">
+        <h3 class="post-title">
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h3>
+        {% if post.date %}
+        <span class="post-date"><i class="fas fa-calendar-alt"></i> {{ post.date | date: "%d/%m/%Y" }}</span>
+        {% endif %}
+        <div class="post-links">
+          {% if post.pdf %}
+          <a href="{{ post.pdf }}" target="_blank" class="post-link">
+            <i class="fas fa-link"></i> Ver material
+          </a>
+          {% endif %}
+          {% if post.attachment %}
+          <a href="{{ post.attachment | prepend: site.baseurl }}" class="post-link">
+            <i class="fas fa-file-archive"></i> Download
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

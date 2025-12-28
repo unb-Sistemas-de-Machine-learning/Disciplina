@@ -1,29 +1,29 @@
 # Site settings
-course_name: SistemaML
-course_description: "Sistemas de Machine Learning."
-course_semester: "Optativa"
+course_name: Sistemas de Machine Learning
+course_description: "Desenvolva sistemas de ML do mundo real que sejam implementáveis, confiáveis e escaláveis."
+course_semester: "2025/2"
 pre_requisites: OO
-repository: RochaCarla/carlarocha.github.com
+repository: unb-Sistemas-de-Machine-learning/Disciplina
 
 
 baseurl: # the subpath of your site, e.g. /blog/
-url: "https://unb-sistemas-de-machine-learning.github.io/Disciplia" # the base hostname & protocol for your site
+url: "https://unb-sistemas-de-machine-learning.github.io/Disciplina" # the base hostname & protocol for your site
 
-schoolname: "UnB"
+schoolname: "UnB - Universidade de Brasília"
 
 
 address: |
     UnB | Universidade de Brasília
     FCTE | Faculdade de Ciências e Tecnologias em Engenharia
-    LabLivre | Centro de Competência em Software Livre UnB
+    Departamento de Engenharia de Software
 
 
 emails: |
     caguiar@unb.br
    
-github_username: lappis-unb
-instagram_username: lab.livre
-facebook_username: lappisunb5
+github_username: unb-Sistemas-de-Machine-learning
+instagram_username: 
+facebook_username: 
 # Set your Google Analytics tracking ID (set up yours at http://www.google.com/analytics/)
 # google_analytics: UA-XXXXXXXX-X
 

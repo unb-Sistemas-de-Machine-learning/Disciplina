@@ -1,20 +1,28 @@
 ---
 layout: default
 ---
-<div class="header">
-    <h1>Repositórios de Apoio ao Curso do Brisa</h1>
-</div>
-<div class=content-wrapper">
-    <p>Aqui você encontrará uma lista de repositórios do GitHub que oferecem recursos e materiais de apoio para o nosso curso do Brisa.</p>
+<div class="coursera-page">
+  <div class="page-header">
+    <h1><i class="fas fa-book"></i> Materiais de Apoio</h1>
+    <p>Recursos e tutoriais para complementar seu aprendizado em Sistemas de Machine Learning.</p>
+  </div>
+
+  <div class="materials-grid">
     {% for item in site.data.materials.items %}
-    <div class="repository-content">
-        <div class="image-wrapper">
-            <img src="{{ item.author }}" alt="author picture">
-        </div>
-        <div class="repo">
-            <h3><a href="{{ item.url | prepend: site.baseurl }}" target="_blank">{{item.curse_name}}</a></h3>
-            <p>{{item.description}}</p>
-        </div>
+    <div class="material-card">
+      <div class="material-icon">
+        <img src="{{ item.author }}" alt="author">
+      </div>
+      <div class="material-content">
+        <h3 class="material-title">
+          <a href="{{ item.url | prepend: site.baseurl }}" target="_blank">{{ item.curse_name }}</a>
+        </h3>
+        <p class="material-description">{{ item.description }}</p>
+        <a href="{{ item.url | prepend: site.baseurl }}" target="_blank" class="material-link">
+          <i class="fas fa-external-link-alt"></i> Acessar material
+        </a>
+      </div>
     </div>
     {% endfor %}
+  </div>
 </div>

@@ -1,62 +1,54 @@
 <footer class="site-footer">
+  <div class="footer-content">
+    <div class="wrapper">
+      <div class="footer-grid">
+        
+        <div class="footer-section">
+          <h3><i class="fas fa-graduation-cap"></i> {{ site.course_name }}</h3>
+          <p>{{ site.course_description }}</p>
+          <p><strong>Semestre:</strong> {{ site.course_semester }}</p>
+        </div>
 
-  <div class="wrapper">
+        <div class="footer-section">
+          <h3><i class="fas fa-university"></i> Instituição</h3>
+          <p>{{ site.address | newline_to_br }}</p>
+          <a href="https://lablivre.unb.br/" target="_blank" class="footer-link">
+            <i class="fas fa-external-link-alt"></i> LabLivre
+          </a>
+        </div>
 
-    <div class="footer-col-wrapper">
-
-      <div class="footer-col  footer-col-1">
-
-        <h3><b>Redes:</b></h3>
-
-        <ul class="social-media-list" style="display:inline-flex">
-          {% if site.github_username %}
-            <li>
-              <a href="https://github.com/{{ site.github_username }}">
-                <i class="fab fa-github" style="color:gray; font-size:30px; margin-right:20px;"></i>
-              </a>
-            </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-            <li>
-              <a href="https://twitter.com/{{ site.twitter_username }}">
-                <i class="fab fa-twitter" style="color:gray; font-size:30px; margin-right:20px;"></i> {{ site.twitter_username }}
-              </a>
-            </li>
-          {% endif %}
-
-          {% if site.instagram_username %}
-            <li>
-              <a href="https://instagram.com/{{ site.instagram_username }}">
-                <i class="fab fa-instagram" style="color:gray; font-size:30px; margin-right:20px;"></i>
-              </a>
-            </li>
-          {% endif %}
-
-          {% if site.facebook_username %}
-            <li>
-              <a href="https://facebook.com/{{ site.facebook_username }}">
-                <i class="fab fa-facebook" style="color:gray; font-size:30px; margin-right:20px;"></i>
-              </a>
-            </li>
-          {% endif %}
-
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-2">
-
-        <h3><b>Contato:</b></h3>
-        <p class="text">
-          {{ site.emails  }}
-        </p>
+        <div class="footer-section">
+          <h3><i class="fas fa-envelope"></i> Contato</h3>
+          <p>{{ site.emails }}</p>
+          
+          <div class="social-links">
+            {% if site.github_username %}
+            <a href="https://github.com/orgs/{{ site.github_username }}/repositories" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            {% endif %}
+            {% if site.instagram_username %}
+            <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            {% endif %}
+            {% if site.twitter_username %}
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            {% endif %}
+            {% if site.facebook_username %}
+            <a href="https://facebook.com/{{ site.facebook_username }}" target="_blank" title="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            {% endif %}
+          </div>
+        </div>
 
       </div>
 
-
-      <div class="footer-col  footer-col-1">
-        <p class="text">
-        {{ site.address | newline_to_br  }}
+      <div class="footer-bottom">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.course_name }} - {{ site.schoolname }}</p>
       </div>
     </div>
   </div>
