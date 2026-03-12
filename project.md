@@ -125,7 +125,7 @@ permalink: /planoensino/
   </div>
 
   <div class="module-intro">
-    Este curso visa fornecer uma estrutura iterativa para desenvolver sistemas de machine learning do mundo real. Começamos considerando todos os interessados em cada projeto de ML e seus objetivos. Diferentes objetivos exigem diferentes escolhas de design, e este curso discutirá os trade-offs dessas escolhas.
+    Este curso aborda o desenvolvimento de sistemas de Machine Learning e IA generativa do mundo real: do dado ao deploy. Ao longo dos módulos, você aprenderá a projetar, implantar e monitorar sistemas de ML em produção, construir aplicações com Large Language Models e RAG, e desenvolver agentes de IA. O curso combina fundamentos técnicos com práticas de MLOps, preparando você para entregar sistemas confiáveis, escaláveis e prontos para produção.
   </div>
 
   <div class="module-card expanded">
