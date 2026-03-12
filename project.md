@@ -48,30 +48,47 @@ permalink: /planoensino/
 <div class="learn-section">
   <h2 class="section-title"><i class="fas fa-graduation-cap"></i> O que você vai aprender</h2>
   <div class="learn-grid">
+    
     <div class="learn-item">
       <i class="fas fa-check"></i>
-      <span>Gerenciamento de dados, engenharia de dados e engenharia de features para ML</span>
+      <span>Compreender o ciclo de vida completo de sistemas de Machine Learning em produção e os desafios de manter modelos em ambientes reais.</span>
     </div>
+
     <div class="learn-item">
       <i class="fas fa-check"></i>
-      <span>Abordagens para seleção de modelos, treinamento e escalabilidade</span>
+      <span>Projetar arquiteturas de MLOps para implantação, monitoramento e evolução contínua de modelos de ML.</span>
     </div>
+
     <div class="learn-item">
       <i class="fas fa-check"></i>
-      <span>Monitorar continuamente e implementar mudanças em sistemas de ML</span>
+      <span>Construir aplicações baseadas em Large Language Models e Retrieval-Augmented Generation (RAG).</span>
     </div>
+
     <div class="learn-item">
       <i class="fas fa-check"></i>
-      <span>Estrutura de equipe e métricas de negócio para projetos de ML</span>
+      <span>Desenvolver agentes de IA capazes de integrar modelos de linguagem com APIs, ferramentas externas e workflows automatizados.</span>
     </div>
+
     <div class="learn-item">
       <i class="fas fa-check"></i>
-      <span>Questões de privacidade, equidade e segurança em ML</span>
+      <span>Projetar pipelines de dados para ML, considerando coleta, rotulação, qualidade e melhoria contínua de datasets.</span>
     </div>
+
     <div class="learn-item">
       <i class="fas fa-check"></i>
-      <span>Deploy de modelos com ferramentas MLOps e Ray Serve</span>
+      <span>Selecionar, treinar e avaliar modelos de machine learning utilizando métricas adequadas e análise sistemática de erros.</span>
     </div>
+
+    <div class="learn-item">
+      <i class="fas fa-check"></i>
+      <span>Monitorar sistemas de ML em produção, identificando problemas como concept drift e degradação de desempenho.</span>
+    </div>
+
+    <div class="learn-item">
+      <i class="fas fa-check"></i>
+      <span>Projetar e implementar um sistema completo de ML ou IA generativa, do dado ao deploy, como projeto final do curso.</span>
+    </div>
+
   </div>
 </div>
 
