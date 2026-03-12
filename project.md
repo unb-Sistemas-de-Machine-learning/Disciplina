@@ -20,7 +20,7 @@ permalink: /planoensino/
       </div>
       <div class="meta-item">
         <i class="fas fa-calendar"></i>
-        <span>Semestre <strong>2025/2</strong></span>
+        <span>Semestre <strong>2026/1</strong></span>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ permalink: /planoensino/
 
 <div class="course-stats">
   <div class="stat-item">
-    <span class="stat-value">5</span>
+    <span class="stat-value">8</span>
     <span class="stat-label">Módulos</span>
   </div>
   <div class="stat-item">
@@ -104,7 +104,7 @@ permalink: /planoensino/
 <div class="modules-section">
   <div class="section-header">
     <h2 class="section-title">Conteúdo do Curso</h2>
-    <span class="modules-count">5 módulos</span>
+    <span class="modules-count">8 módulos</span>
   </div>
 
   <div class="module-intro">
@@ -115,17 +115,18 @@ permalink: /planoensino/
     <div class="module-header">
       <span class="module-number">1</span>
       <div class="module-info">
-        <div class="module-title">Fundamentos de ML e Sistemas de Dados</div>
-        <div class="module-duration">Aulas 1-3</div>
+        <div class="module-title">Introdução a Sistemas de Machine Learning</div>
       </div>
       <i class="fas fa-chevron-down module-toggle"></i>
     </div>
     <div class="module-content">
-      <p>Entenda os fundamentos da produção de machine learning e como trabalhar com dados de treinamento de forma eficiente.</p>
+      <p>Este módulo apresenta o ciclo de vida de sistemas de machine learning em produção e os desafios associados ao desenvolvimento e operação desses sistemas.</p>
+      <p><strong>Objetivos de aprendizagem:</strong> Analisar o ciclo de vida completo de sistemas de ML. Comparar pipelines de experimentação e pipelines de produção. Identificar desafios de manutenção de sistemas de ML em ambientes reais. Explicar o conceito de concept drift e seus impactos em sistemas de ML.</p>
       <ul class="module-topics">
-        <li><i class="fas fa-play-circle"></i> Entendendo a produção de machine learning</li>
-        <li><i class="fas fa-play-circle"></i> Fundamentos de ML e sistemas de dados</li>
-        <li><i class="fas fa-play-circle"></i> Dados de treinamento</li>
+        <li><i class="fas fa-play-circle"></i> Introdução a sistemas de Machine Learning</li>
+        <li><i class="fas fa-play-circle"></i> Ciclo de vida de projetos de ML</li>
+        <li><i class="fas fa-play-circle"></i> Diferenças entre experimentação e produção</li>
+        <li><i class="fas fa-play-circle"></i> Estudo de caso de sistema de ML real</li>
       </ul>
     </div>
   </div>
@@ -134,17 +135,19 @@ permalink: /planoensino/
     <div class="module-header">
       <span class="module-number">2</span>
       <div class="module-info">
-        <div class="module-title">Engenharia de Features e Modelos</div>
-        <div class="module-duration">Aulas 4-8</div>
+        <div class="module-title">MLOps e Implantação de Sistemas de ML</div>
       </div>
       <i class="fas fa-chevron-down module-toggle"></i>
     </div>
     <div class="module-content">
-      <p>Aprenda técnicas de engenharia de features e como selecionar, desenvolver e avaliar modelos de ML.</p>
+      <p>Este módulo apresenta práticas de engenharia para a implantação e a operação de sistemas de ML.</p>
+      <p><strong>Objetivos:</strong> Projetar arquiteturas de deploy de modelos. Comparar estratégias de implantação. Monitorar sistemas de ML em produção.</p>
       <ul class="module-topics">
-        <li><i class="fas fa-play-circle"></i> Engenharia de features</li>
-        <li><i class="fas fa-play-circle"></i> Seleção, desenvolvimento e treinamento de modelos</li>
-        <li><i class="fas fa-play-circle"></i> Avaliação de modelos</li>
+        <li><i class="fas fa-play-circle"></i> Principais desafios na implantação</li>
+        <li><i class="fas fa-play-circle"></i> Estratégias de deploy (shadow, canary, blue-green)</li>
+        <li><i class="fas fa-play-circle"></i> Monitoramento de modelos</li>
+        <li><i class="fas fa-play-circle"></i> Monitoramento de pipelines de dados</li>
+        <li><i class="fas fa-play-circle"></i> Concept drift e monitoramento de desempenho</li>
       </ul>
     </div>
   </div>
@@ -153,17 +156,21 @@ permalink: /planoensino/
     <div class="module-header">
       <span class="module-number">3</span>
       <div class="module-info">
-        <div class="module-title">Deploy e MLOps</div>
-        <div class="module-duration">Aulas 9-10</div>
+        <div class="module-title">LLM Systems e Retrieval-Augmented Generation</div>
       </div>
       <i class="fas fa-chevron-down module-toggle"></i>
     </div>
     <div class="module-content">
-      <p>Coloque seus modelos em produção usando ferramentas modernas de MLOps.</p>
+      <p>Este módulo introduz aplicações baseadas em Large Language Models (LLMs) e sistemas de Retrieval-Augmented Generation (RAG).</p>
+      <p><strong>Objetivos:</strong> Explicar a arquitetura de sistemas baseados em LLM. Projetar pipelines de RAG. Avaliar aplicações baseadas em IA generativa.</p>
       <ul class="module-topics">
-        <li><i class="fas fa-play-circle"></i> Deploy de modelos</li>
-        <li><i class="fas fa-play-circle"></i> Tutoriais de deployment</li>
-        <li><i class="fas fa-play-circle"></i> Avaliação de ferramentas MLOps e Ray Serve</li>
+        <li><i class="fas fa-play-circle"></i> Fundamentos de Large Language Models</li>
+        <li><i class="fas fa-play-circle"></i> Diferenças entre modelos discriminativos e generativos</li>
+        <li><i class="fas fa-play-circle"></i> Prompt engineering</li>
+        <li><i class="fas fa-play-circle"></i> Arquitetura de sistemas RAG</li>
+        <li><i class="fas fa-play-circle"></i> Embeddings e vetorização</li>
+        <li><i class="fas fa-play-circle"></i> Bancos vetoriais</li>
+        <li><i class="fas fa-play-circle"></i> Recuperação semântica de informação</li>
       </ul>
     </div>
   </div>
@@ -172,18 +179,19 @@ permalink: /planoensino/
     <div class="module-header">
       <span class="module-number">4</span>
       <div class="module-info">
-        <div class="module-title">Monitoramento e Aprendizado Contínuo</div>
-        <div class="module-duration">Aulas 11-14</div>
+        <div class="module-title">Agentes de IA</div>
       </div>
       <i class="fas fa-chevron-down module-toggle"></i>
     </div>
     <div class="module-content">
-      <p>Aprenda a diagnosticar falhas, monitorar modelos em produção e implementar aprendizado contínuo.</p>
+      <p>Este módulo apresenta o conceito de agentes de IA e sua integração com sistemas baseados em LLM.</p>
+      <p><strong>Objetivos:</strong> Explicar a arquitetura de agentes baseados em LLM. Projetar workflows automatizados com agentes. Avaliar riscos e limitações de sistemas autônomos.</p>
       <ul class="module-topics">
-        <li><i class="fas fa-play-circle"></i> Diagnóstico de falhas em sistemas de ML</li>
-        <li><i class="fas fa-play-circle"></i> Shifts de distribuição de dados</li>
-        <li><i class="fas fa-play-circle"></i> Monitoramento & Aprendizado Contínuo</li>
-        <li><i class="fas fa-play-circle"></i> Deploy e rastreamento de experimentos</li>
+        <li><i class="fas fa-play-circle"></i> Introdução a agentes de IA</li>
+        <li><i class="fas fa-play-circle"></i> Arquitetura de agentes baseados em LLM</li>
+        <li><i class="fas fa-play-circle"></i> Integração com APIs e ferramentas externas</li>
+        <li><i class="fas fa-play-circle"></i> Sistemas multi-agentes</li>
+        <li><i class="fas fa-play-circle"></i> Segurança e observabilidade</li>
       </ul>
     </div>
   </div>
@@ -192,19 +200,81 @@ permalink: /planoensino/
     <div class="module-header">
       <span class="module-number">5</span>
       <div class="module-info">
-        <div class="module-title">Tópicos Avançados e Projeto Final</div>
-        <div class="module-duration">Aulas 16-20</div>
+        <div class="module-title">Engenharia de Dados para Machine Learning</div>
       </div>
       <i class="fas fa-chevron-down module-toggle"></i>
     </div>
     <div class="module-content">
-      <p>Explore tópicos avançados como séries temporais, GNN, fairness e segurança. Apresente seu projeto final.</p>
+      <p>Este módulo aborda o papel central dos dados no desenvolvimento de sistemas de ML, incluindo a coleta, a organização, a rotulação e a qualidade dos dados.</p>
+      <p><strong>Objetivos:</strong> Analisar problemas de qualidade de dados em ML. Avaliar estratégias para melhoria de datasets. Projetar pipelines de dados para ML.</p>
       <ul class="module-topics">
-        <li><i class="fas fa-play-circle"></i> Forecasting em séries temporais e GNN</li>
-        <li><i class="fas fa-play-circle"></i> ML além da acurácia: Fairness, Segurança e Governança</li>
-        <li><i class="fas fa-play-circle"></i> Infraestrutura e plataformas de ML</li>
-        <li><i class="fas fa-play-circle"></i> Integração de ML em negócios</li>
-        <li><i class="fas fa-play-circle"></i> Demo day de projetos finais</li>
+        <li><i class="fas fa-play-circle"></i> Obtenção e coleta de dados</li>
+        <li><i class="fas fa-play-circle"></i> Rotulação e consistência de rótulos</li>
+        <li><i class="fas fa-play-circle"></i> Problemas comuns em datasets</li>
+        <li><i class="fas fa-play-circle"></i> Human-level performance</li>
+        <li><i class="fas fa-play-circle"></i> Estratégias de melhoria de dados</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <div class="module-header">
+      <span class="module-number">6</span>
+      <div class="module-info">
+        <div class="module-title">Desenvolvimento e Avaliação de Modelos</div>
+      </div>
+      <i class="fas fa-chevron-down module-toggle"></i>
+    </div>
+    <div class="module-content">
+      <p>Este módulo aborda técnicas de seleção, treinamento e avaliação de modelos de machine learning.</p>
+      <p><strong>Objetivos:</strong> Projetar pipelines de modelagem. Avaliar desempenho de modelos. Aplicar análise de erros para melhoria de modelos.</p>
+      <ul class="module-topics">
+        <li><i class="fas fa-play-circle"></i> Seleção e treinamento de modelos</li>
+        <li><i class="fas fa-play-circle"></i> Estabelecimento de baselines</li>
+        <li><i class="fas fa-play-circle"></i> Limitações de métricas agregadas</li>
+        <li><i class="fas fa-play-circle"></i> Análise de erros</li>
+        <li><i class="fas fa-play-circle"></i> Auditoria de desempenho</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <div class="module-header">
+      <span class="module-number">7</span>
+      <div class="module-info">
+        <div class="module-title">MLOps e Implantação de Sistemas de ML (Avançado)</div>
+      </div>
+      <i class="fas fa-chevron-down module-toggle"></i>
+    </div>
+    <div class="module-content">
+      <p>Este módulo apresenta práticas de engenharia para a implantação e a operação de sistemas de ML.</p>
+      <p><strong>Objetivos:</strong> Projetar arquiteturas de deploy de modelos. Comparar estratégias de implantação. Monitorar sistemas de ML em produção.</p>
+      <ul class="module-topics">
+        <li><i class="fas fa-play-circle"></i> Principais desafios na implantação</li>
+        <li><i class="fas fa-play-circle"></i> Estratégias de deploy (shadow, canary, blue-green)</li>
+        <li><i class="fas fa-play-circle"></i> Monitoramento de modelos</li>
+        <li><i class="fas fa-play-circle"></i> Monitoramento de pipelines de dados</li>
+        <li><i class="fas fa-play-circle"></i> Concept drift e monitoramento de desempenho</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <div class="module-header">
+      <span class="module-number">8</span>
+      <div class="module-info">
+        <div class="module-title">Projeto Final</div>
+      </div>
+      <i class="fas fa-chevron-down module-toggle"></i>
+    </div>
+    <div class="module-content">
+      <p>Os estudantes desenvolverão um sistema completo de ML ou de IA generativa.</p>
+      <p><strong>Exemplos de projetos:</strong></p>
+      <ul class="module-topics">
+        <li><i class="fas fa-play-circle"></i> Chatbot baseado em documentos</li>
+        <li><i class="fas fa-play-circle"></i> Sistema de busca semântica</li>
+        <li><i class="fas fa-play-circle"></i> Assistente de análise de dados</li>
+        <li><i class="fas fa-play-circle"></i> Sistema de recomendação baseado em texto</li>
       </ul>
     </div>
   </div>
@@ -283,6 +353,9 @@ permalink: /planoensino/
     <div class="bib-item">
       <strong>Bibliografia Complementar:</strong><br>
       <a href="https://www.youtube.com/@AndrejKarpathy" target="_blank">Deep Dive into LLMs like ChatGPT - Andrej Karpathy</a>
+    </div>
+    <div class="bib-item">
+      <a href=" https://madewithml.com/courses/mlops/distributed-data/" target="_blank">ML for Developers</a>
     </div>
   </div>
 </div>

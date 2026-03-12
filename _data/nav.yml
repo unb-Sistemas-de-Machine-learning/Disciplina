@@ -7,10 +7,6 @@ items:
   name: Plano de ensino
   icon_class: fas fa-list-alt
 
-- url: /materials/
-  name: Materiais
-  icon_class: fas fa-book
-
 - url: /slides/
   name: Slides
   icon_class: fas fa-book-reader

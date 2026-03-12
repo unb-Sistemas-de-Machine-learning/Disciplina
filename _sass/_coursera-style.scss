@@ -2,31 +2,10 @@
 
 // Page container
 .plano-ensino-page {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
+  padding: 0 1.5rem;
 
-// Override wrapper constraints for this page
-.page-content:has(.plano-ensino-page) {
-  .wrapper {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-// Fallback for browsers without :has()
-.plano-ensino-page {
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding-left: calc(50vw - 50%);
-  padding-right: calc(50vw - 50%);
-
-  .course-hero {
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding-left: calc(50vw - 50% + 2rem);
-    padding-right: calc(50vw - 50% + 2rem);
+  @media (max-width: 768px) {
+    padding: 0 1rem;
   }
 }
 
