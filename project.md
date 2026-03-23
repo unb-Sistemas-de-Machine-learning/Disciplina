@@ -336,18 +336,18 @@ permalink: /planoensino/
       <tbody>
         <tr>
           <td>Projeto Final</td>
-          <td>65%</td>
+          <td>55%</td>
           <td>Construa uma aplicação completa de ML. Apresentação no Demo Day.</td>
         </tr>
         <tr>
           <td>Trabalhos</td>
           <td>30%</td>
-          <td>2-3 tarefas focadas para reforçar conceitos-chave.</td>
+          <td> tarefas focadas para reforçar conceitos-chave.</td>
         </tr>
         <tr>
           <td>Participação</td>
-          <td>5%</td>
-          <td>Contribuição nas discussões em sala e fóruns.</td>
+          <td>15%</td>
+          <td>Contribuição nas discussões em sala e seminários.</td>
         </tr>
       </tbody>
     </table>
