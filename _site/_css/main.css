@@ -4,7 +4,9 @@ html:not([data-scroll='0']) .site-header { transition: background-color 0.5s; ba
 
 .site-header { background-color: #00000000; position: fixed; left: 0; right: 0; z-index: 100; }
 
-.site-nav { display: flex; justify-content: space-between; align-items: center; }
+.menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: #000000; cursor: pointer; padding: 0.25rem 0.5rem; }
+
+.site-nav { display: flex; justify-content: space-between; align-items: center; position: relative; }
 
 .site-header .wrapper { padding: 15px 20px; position: relative; }
 
@@ -354,7 +356,8 @@ ul#archive li span a:hover { border-bottom: #bdbdbd 1px solid;
 .gradient-bg .g5 { position: absolute; background: radial-gradient(circle at center, rgba(190, 160, 230, 0.8) 0, rgba(190, 160, 230, 0) 50%) no-repeat; mix-blend-mode: hard-light; width: 120%; height: 120%; top: -10%; left: -10%; transform-origin: calc(50% - 800px) calc(50% + 200px); animation: moveInCircle 20s ease infinite; opacity: 1; }
 .gradient-bg .interactive { position: absolute; background: radial-gradient(circle at center, rgba(210, 180, 240, 0.8) 0, rgba(210, 180, 240, 0) 50%) no-repeat; mix-blend-mode: hard-light; transform: 0; width: 100%; height: 100%; top: -50%; left: -50%; opacity: 0.7; }
 
-.home-message { z-index: 99; height: 100vh; width: 100%; position: absolute; top: 0; left: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.home-message { z-index: 99; height: 100vh; width: 100%; position: absolute; top: 0; left: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; pointer-events: none; }
+.home-message * { pointer-events: auto; }
 
 .home-message .title { color: #1f285f; cursor: default; font-weight: 900; font-size: 50px; margin: 20px 30px; text-align: center; }
 
@@ -439,9 +442,12 @@ ul#archive li span a:hover { border-bottom: #bdbdbd 1px solid;
 .about-content .about-text { font-size: 14px; color: white; text-align: left; }
 .about-content h1 { color: white; margin: 0; margin-bottom: 60px; font-size: 40px; font-weight: 600; }
 
-@media screen and (max-width: 800px) { .site-nav .menu { display: none; }
-  .site-nav .sidebar-content { display: flex; justify-content: flex-end; height: 100vh; bottom: 0px; position: fixed; }
-  .site-nav .sidebar-content .sidebar { height: 100vh; background-color: white; }
+@media screen and (max-width: 800px) { .menu-toggle { display: block; }
+  .site-nav .menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+  .site-nav .menu li { margin: 0; padding: 0.5rem 0; }
+  .site-nav .menu a { color: #111 !important; }
+  .site-nav .menu.open { display: flex; }
+  .site-nav .sidebar-content { display: none; }
   .last-editions-wrapper { flex-direction: column; height: 100%; }
   .last-editions-wrapper .editions-image-wrapper { width: 100%; }
   .last-editions-wrapper .editions-text-wrapper { width: 100%; height: 60vh; flex-direction: column; padding: 0px; }

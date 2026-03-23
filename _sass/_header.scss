@@ -52,11 +52,22 @@ html:not([data-scroll='0']) {
 //     }
 // }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: $header-text-color;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
 .site-nav {
     // Flex centrilization
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .site-header .wrapper {

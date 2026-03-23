@@ -1,25 +1,36 @@
 @media screen and (max-width: 800px) {
-    //temporrio
+
+    .menu-toggle {
+        display: block;
+    }
 
     .site-nav .menu { 
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+        li {
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        a {
+            color: $text-color !important;
+        }
+
+        &.open {
+            display: flex;
+        }
     }
 
     .site-nav .sidebar-content { 
-        display: flex;
-        justify-content: flex-end;
-        
-        
-        height: 100vh;
-        bottom: 0px;
-
-        position: fixed;
-
-        .sidebar {
-            height: 100vh;
-
-            background-color: white;
-        }
+        display: none;
     }
 
     .last-editions-wrapper {

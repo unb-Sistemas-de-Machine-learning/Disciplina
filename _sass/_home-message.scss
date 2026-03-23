@@ -11,6 +11,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
+
+  * {
+    pointer-events: auto;
+  }
 }
 
 .home-message .title {
