@@ -2,7 +2,11 @@ items:
 - url: /
   name: Página Inicial
   icon_class: fa fa-home fa-lg
-  
+
+- url: /turma-2026-2/
+  name: Turma 2026/2
+  icon_class: fas fa-users
+
 - url: /planoensino/
   name: Plano de ensino
   icon_class: fas fa-list-alt

@@ -1,7 +1,7 @@
 # Site settings
 course_name: Sistemas de Machine Learning
 course_description: "Desenvolva sistemas de ML do mundo real que sejam implementáveis, confiáveis e escaláveis."
-course_semester: "2026/1"
+course_semester: "2026/2"
 pre_requisites: OO
 repository: unb-Sistemas-de-Machine-learning/Disciplina
 
